@@ -31,14 +31,4 @@ class ContentPage extends StatelessWidget {
       ),
     );
   }
-
-  final eventName = Strings.title;
-
-  Widget text() {
-    return Text('Meu texto');
-  }
-}
-
-class Strings {
-  static const title = "Título";
 }
