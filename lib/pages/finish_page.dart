@@ -13,7 +13,7 @@ class FinishPage extends StatelessWidget {
           children: <Widget>[
             Center(
                 child: Image.asset(
-              AppImages.logo,
+              Images.logo,
               height: 200,
             )),
             Padding(
@@ -21,7 +21,7 @@ class FinishPage extends StatelessWidget {
               child: Align(
                 alignment: Alignment.bottomCenter,
                 child: Image.asset(
-                  AppImages.footer,
+                  Images.footer,
                   height: 35,
                 ),
               ),

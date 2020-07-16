@@ -18,38 +18,46 @@ class CubosDarkContainer extends StatelessWidget {
 
     final _margin = width / 8.0;
 
-    return Container(
-      color: AppColors.black,
-      child: Stack(
-        children: <Widget>[
-          CustomPaint(
-            size: Size(size, size),
-            painter: _BlueTrianglePainter(),
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          color: AppColors.black,
+          image: DecorationImage(
+            image: AssetImage(Images.crossBackground),
+            fit: BoxFit.cover,
           ),
-          Positioned(
-            bottom: 0,
-            right: 0,
-            child: CustomPaint(
+        ),
+        child: Stack(
+          children: <Widget>[
+            CustomPaint(
               size: Size(size, size),
-              painter: _PinkTrianglePainter(),
+              painter: _BlueTrianglePainter(),
             ),
-          ),
-          Positioned(
-            top: 10,
-            right: 30,
-            child: Image.asset(AppImages.logo),
-            height: 100,
-          ),
-          Padding(
-            padding: EdgeInsets.all(_margin),
-            child: Stack(
-              children: <Widget>[
-                if (text != null) Center(child: MainTitle(text: text)),
-                if (child != null) child,
-              ],
+            Positioned(
+              bottom: 0,
+              right: 0,
+              child: CustomPaint(
+                size: Size(size, size),
+                painter: _PinkTrianglePainter(),
+              ),
             ),
-          )
-        ],
+            Positioned(
+              top: 10,
+              right: 30,
+              child: Image.asset(Images.logo),
+              height: 100,
+            ),
+            Padding(
+              padding: EdgeInsets.all(_margin),
+              child: Stack(
+                children: <Widget>[
+                  if (text != null) Center(child: MainTitle(text: text)),
+                  if (child != null) child,
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

@@ -11,9 +11,10 @@ class ChallengeTitlePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return GlobalWidget(
       child: CubosDarkContainer(
-          child: Center(
-        child: MainTitle(text: "Desafio"),
-      )),
+        child: Center(
+          child: MainTitle(text: "Desafio"),
+        ),
+      ),
     );
   }
 }

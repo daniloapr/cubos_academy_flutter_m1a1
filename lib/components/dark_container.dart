@@ -13,28 +13,31 @@ class DarkContainer extends StatelessWidget {
     // final _width = MediaQuery.of(context).size.width;
     final _marginTop = 100.0;
     final _marginLeft = 100.0;
-    return Container(
-      color: AppColors.black,
-      child: Stack(
-        fit: StackFit.expand,
-        children: <Widget>[
-          Positioned(
-            top: 10,
-            right: 30,
-            child: Image.asset(AppImages.logo),
-            height: 100,
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          color: AppColors.black,
+          image: DecorationImage(
+            image: AssetImage(Images.crossBackground),
+            fit: BoxFit.cover,
           ),
-          Padding(
-            padding: ignorePadding
-                ? EdgeInsets.all(0)
-                : EdgeInsets.only(top: _marginTop, left: _marginLeft),
-            child: Stack(
-              children: <Widget>[
-                if (child != null) child,
-              ],
+        ),
+        child: Stack(
+          fit: StackFit.expand,
+          children: <Widget>[
+            Positioned(
+              top: 10,
+              right: 30,
+              child: Image.asset(Images.logo),
+              height: 100,
             ),
-          )
-        ],
+            Padding(
+                padding: ignorePadding
+                    ? EdgeInsets.all(0)
+                    : EdgeInsets.only(top: _marginTop, left: _marginLeft),
+                child: child ?? Container())
+          ],
+        ),
       ),
     );
   }

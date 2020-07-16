@@ -28,18 +28,18 @@ class GlobalBloc extends BlocBase {
   bool allowKeyPress = true;
 
   void handleKeyEvent(RawKeyEvent event) {
-    if (allowKeyPress) {
-      if (event.isKeyPressed(LogicalKeyboardKey.arrowRight) ||
-          event.logicalKey == LogicalKeyboardKey.space) {
-        navigateForward();
-        print('navigate: Forward');
-        onKeyHandled();
-      } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
-        navigateBackwards();
-        print('navigate: Back');
-        onKeyHandled();
-      }
-    }
+    // if (allowKeyPress) {
+    //   if (event.isKeyPressed(LogicalKeyboardKey.arrowRight) ||
+    //       event.logicalKey == LogicalKeyboardKey.space) {
+    //     navigateForward();
+    //     print('navigate: Forward');
+    //     onKeyHandled();
+    //   } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
+    //     navigateBackwards();
+    //     print('navigate: Back');
+    //     onKeyHandled();
+    //   }
+    // }
   }
 
   void onKeyHandled() {

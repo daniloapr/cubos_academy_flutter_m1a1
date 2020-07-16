@@ -25,7 +25,6 @@ class _GlobalWidgetState extends State<GlobalWidget> {
 
   @override
   Widget build(BuildContext context) {
-    FocusScope.of(context).requestFocus(_focusNode);
     return Scaffold(
       body: RawKeyboardListener(
         focusNode: _focusNode,
